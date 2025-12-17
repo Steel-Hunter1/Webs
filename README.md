@@ -11,18 +11,27 @@ My task for this year
 1.	Собрать все необходимые файлы
 2.	Расположить все файлы согласно схеме:
 …/personal-finance
+
 .....->main.py
+
 .....->database.py
+
 .....->frontend.py
+
 .....->operations.py
+
 .....->dockerfile
+
 .....->docker-compose.yml
+
 .....->requirements.txt
+
 .....->/templates/index.html
-3.	Открыть терминал внутри директории 
-4.	Набрать команду (sudo) docker compose up –build и немного подождать
-5.	В браузерной строке набрать http://localhost и перейти
-6.	В браузере должно появиться приложение следующего вида:  
+
+4.	Открыть терминал внутри директории 
+5.	Набрать команду (sudo) docker compose up –build и немного подождать
+6.	В браузерной строке набрать http://localhost и перейти
+7.	В браузере должно появиться приложение следующего вида:  
 <img width="766" height="433" alt="image" src="https://github.com/user-attachments/assets/7f34baf8-baff-432e-b288-df9ae339e74b" />
 
 
