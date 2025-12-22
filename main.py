@@ -1,5 +1,5 @@
 
-# main.py
+
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 from database import finance_db
@@ -35,7 +35,7 @@ async def add_transaction(
     # Находим категорию, чтобы узнать тип (income или expense)
     cat_doc = await db.categories.find_one({"name": category})
     if not cat_doc:
-        # Если категории нет — ошибка, но у нас все категории есть по умолчанию
+        # Если категории нет — ошибка, но  все категории есть по умолчанию
         return HTMLResponse("Категория не найдена", status_code=400)
     
     transaction_type = cat_doc["type"]  # "income" или "expense"
@@ -54,7 +54,7 @@ async def delete_transaction(transaction_id: str):
 async def delete_account_route(account_name: str):
     """Обработчик нажатия на крестик у счёта"""
     success = await finance_db.delete_account(account_name)
-    # Можно добавить уведомление, но пока просто редирект
+    
     return RedirectResponse("/", status_code=303)
 
 @app.get("/", response_class=HTMLResponse)
